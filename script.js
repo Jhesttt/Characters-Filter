@@ -102,7 +102,7 @@ const characters = [
         element: "Pyro",
         weapon: "Polearm",
         region: "Liyue",
-        image: "./assets/img/ui-avataricon-HuTao.png"
+        image: "./assets/img/ui-avataricon-Hutao.png"
     },
     {
         name: "Jean",
