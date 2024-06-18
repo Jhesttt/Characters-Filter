@@ -1,0 +1,158 @@
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #DDDDDF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0 48px;
+    background-color: #0C0F1D;
+    padding-bottom: 44px;
+}
+
+header {
+    margin: 44px 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.categories {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    transition: 0.15s;
+    background-color: #1B1D2A;
+    padding: 12px 20px;
+    border-radius: 24px;
+    cursor: pointer;
+    border: 0;
+    text-transform: capitalize;
+    outline: none;
+}
+
+.category:hover {
+    background-color: #343746;
+}
+
+.category:focus {
+    outline: none;
+}
+
+.category.active {
+    background-color: #DDDDDF;
+    color: #343746;
+}
+
+.characters {   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+    padding-bottom: 24px;
+}
+
+.character {
+    display: flex;
+    padding: 36px;
+    background-color: #1B1D2A;
+    align-items: center;
+    gap: 36px;
+    border-radius: 16px;
+    /* width: 350px; */
+}
+
+.photoContainer {
+    height: 144px;
+    width: 144px;
+    border-radius: 72px;
+    background-color: #343746;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+#photo {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.label {
+    font-weight: 700;
+}
+
+@media all and (max-width:1024px) {
+    body {
+        display: block;
+        height: 100vh;
+        padding: 0 48px;
+        background-color: #0C0F1D;
+        padding-bottom: 44px;
+    }
+    
+
+    .characters {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 32px;
+    }
+}
+
+@media all and (max-width:800px) {
+    .category{
+        flex: 1 1 15%;
+    }
+}
+
+@media all and (max-width:545px) {
+    .category{
+        flex: 1 1 30%;
+    }
+    body{
+        padding: 0 24px;
+    }
+
+    .filter{
+        scale: 0.95;
+    }
+
+    .character {
+        display: flex;
+        flex-direction: column;
+        padding: 36px;
+        background-color: #1B1D2A;
+        align-items: center;
+        gap: 36px;
+        border-radius: 16px;
+    }
+
+    .infoContainer {
+        align-self: self-start;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}
